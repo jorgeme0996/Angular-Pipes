@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'pipes';
+  nombre = "Jorge";
+  arreglo = [1,2,3,4,5,6,7,8,9,10];
+  PI = Math.PI;
+  decimalNumber = 0.3333;
+  salario = 1234.5;
 }
