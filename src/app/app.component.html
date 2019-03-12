@@ -81,6 +81,40 @@
         <td> currency:'EUR':false:'4.0-0' </td>
         <td>{{salario | currency:'EUR':false:'4.0-0'}}</td>
       </tr>
+      <tr>
+        <td>{{valorPromesa}}</td>
+        <td> async </td>
+        <td>{{valorPromesa | async}}</td>
+      </tr>
+      <tr>
+        <td>{{fecha}}</td>
+        <td> date </td>
+        <td>{{fecha | date}}</td>
+      </tr>
+      <tr>
+        <td>{{fecha}}</td>
+        <td> date:'short' </td>
+        <td>{{fecha | date:'short'}}</td>
+      </tr>
+      <tr>
+        <td>{{fecha}}</td>
+        <td> date </td>
+        <td>{{fecha | date}}</td>
+      </tr>
+      <tr>
+        <td>{{nombre2}}</td>
+        <td> capitalizado Pipe personalizado </td>
+        <td>{{nombre2 | capitalizado}}</td>
+      </tr>
+      <tr>
+        <td>{{nombre}}</td>
+        <td> 
+          contraseña: {{activar}}
+          <br>
+          <button (click)="activar = !activar" type="button" class="btn btn-outline-primary">Activar/Desactivar</button> 
+        </td>
+        <td>{{nombre | contrasena:activar}}</td>
+      </tr>
     </tbody>
   </table>
 
@@ -88,5 +122,13 @@
   <ul>
     <li *ngFor="let number of arreglo | slice:0:5">{{number}}</li>
   </ul>
+
+  <h4>JSON</h4>
+  <pre>
+    {{hero | json}}
+  </pre>
+
+  <h4>Youtube <small>video</small></h4>
+  <iframe width="560" height="315" [src]="video | domseguro:'https://www.youtube.com/embed/'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
